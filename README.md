@@ -1,6 +1,10 @@
 # LBYARCH MCO2 (DAXPY OPERATION) 
 **MP Group 13: Matthew Escober, Mezen Lababidi**
 
+## Task 
+
+Write a kernel in C to execute both a C program and ASM program performing the DAXPY (A*X+Y) function with the inputs to the program being an integer N which denotes the size of the vectors, a scalar A, and double precision vectors X, Y, Z where Z is the storage for the final answer. 
+
 ## Correctness Check & Analysis
 ![2^20](screenshots/n_20_debug.png)
 
@@ -30,5 +34,7 @@ Overall Average Time of C: 0.177299833
 
 Overall Average Time of ASM: 0.117116667
 
-This means then that on average across 30 test runs per input size per mode, ASM executes faster than C. This is probably due to ASM being a lower level language therefore making it easier for the machine to process whereas the C code has to be broken down into ASM before it can be executed by the machine adding an overhead for the C execution time.
+This means then that, on average across 30 test runs per input size per mode, ASM executes faster than C. This is probably due to ASM being a lower level language therefore making it easier for the machine to process whereas the C code has to be broken down into ASM before it can be executed by the machine adding an overhead for the C execution time.
+
+## Graphs
 
