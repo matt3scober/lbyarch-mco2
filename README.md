@@ -35,6 +35,3 @@ Overall Average Time of C: 0.177299833
 Overall Average Time of ASM: 0.117116667
 
 This means then that, on average across 30 test runs per input size per mode, ASM executes faster than C. This is probably due to ASM being a lower level language therefore making it easier for the machine to process whereas the C code has to be broken down into ASM before it can be executed by the machine adding an overhead for the C execution time.
-
-## Graphs
-
