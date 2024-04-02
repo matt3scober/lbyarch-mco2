@@ -1,33 +1,34 @@
-LBYARCH MCO2 
-Matthew Escober
-Mezen Lababidi
+# LBYARCH MCO2 (DAXPY OPERATION) 
+**MP Group 13: Matthew Escober, Mezen Lababidi**
 
-Write the kernel in (1) C program and (2) an x86-64 assembly language.  
-The kernel is to perform DAXPY (A*X + Y) function.
+## Correctness Check & Analysis
+![2^20](screenshots/n_20_debug.png)
 
-Input: Scalar variable n (integer) contains the length of the vector;  
-Scalar variable A is a double-precision float. Vectors X, Y and Z are double-precision float.
+*Figure 1: Comparison of Time and Outputs for N = 2^20 in debug mode*
 
-*Required to use functional scalar SIMD registers
+![2^20](screenshots/n_20_release.png)
 
-*Required to use functional scalar SIMD floating-point instructions
+*Figure 2: Comparison of Time and Outputs for N = 2^20 in release mode*
 
-Process:  
-Example:
+![2^24](screenshots/n_24_debug.png)
 
-A --> 2.0
+*Figure 3: Comparison of Time and Outputs for N = 2^24 in debug mode*
 
-x -> 1.0, 2.0, 3.0
+![2^24](screenshots/n_24_release.png)
 
-y -> 11.0, 12.0, 13.0
+*Figure 4: Comparison of Time and Outputs for N = 2^24 in release mode*
 
-(answer) z--> 13.0, 16.0, 19.0
+!![2^28](screenshots/n_28_debug.png)
 
-Output: store result in vector Z.  
-Display the result of 1st ten elements of vector Z for all versions of kernel (i.e., C and x86-64).
+*Figure 5: Comparison of Time and Outputs for N = 2^28 in debug mode*
 
-Results:
+![2^28](screenshots/n_28_release.png)
 
+*Figure 6: Comparison of Time and Outputs for N = 2^28 in release mode*
 
+Overall Average Time of C: 0.177299833
 
-Analysis:
+Overall Average Time of ASM: 0.117116667
+
+This means then that on average across 30 test runs per input size per mode, ASM executes faster than C. This is probably due to ASM being a lower level language therefore making it easier for the machine to process whereas the C code has to be broken down into ASM before it can be executed by the machine adding an overhead for the C execution time.
+
